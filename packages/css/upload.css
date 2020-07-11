@@ -1,0 +1,64 @@
+/* 选择文件组件容器 */
+.logic_upload_container {
+  position: relative;
+  display: inline-block;
+  border: 1px dashed #c0ccda;
+  border-radius: 10px;
+}
+.logic_upload_container:hover {
+  border-color: #1989fa;
+}
+.logic_upload_container:hover .logic_upload_icon{
+  color: #1989fa;
+}
+.logic_upload_container input {
+  display: none;
+}
+.logic_upload_container .logic_upload_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+/* 上传前 */
+.logic_upload_box.logic_before_upload {
+  cursor: pointer;
+}
+/* 上传中 */
+.logic_upload_box.logic_upload_loading {
+  cursor: unset;
+}
+.logic_upload_box .logic_upload_icon {
+  font-size: 28px;
+  color: #c0ccda;
+}
+.logic_upload_box .loading_svg {
+  width: 15%;
+  height: 15%;
+  animation: rotate-infinite .8s linear infinite;
+}
+.loading_svg svg{
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotate-infinite {
+  0%{
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  0%{
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}

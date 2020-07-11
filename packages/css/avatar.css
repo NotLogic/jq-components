@@ -1,0 +1,10 @@
+/* 通选ing容器 */
+.logic_avatar_container {
+  display: inline-block;
+}
+/* 头像图片 */
+.logic_avatar_container .logic_avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
