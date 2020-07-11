@@ -7,6 +7,8 @@
   <!-- 组件css -->
   <link rel="stylesheet" href="./packages/css/avatar.css">
   <link rel="stylesheet" href="./packages/css/upload.css">
+  <link rel="stylesheet" href="./packages/css/detail.css">
+
   <link rel="stylesheet" href="./css/demo.css">
 </head>
 <body>
@@ -18,15 +20,21 @@
       <div class="sub_title bottom_blank">多个头像、图片</div>
       <div id="avatar_batch" class="bottom_blank"></div>
     </div>
-    <div class="title">上传文件</div>
-    <div id="upload_demo">
-      <div class="upload"></div>
-      <div class="upload2"></div>
+    <div class="title" class="bottom_blank">上传文件</div>
+    <div id="upload_demo" class="bottom_blank">
+      <span class="upload"></span>
+      <span class="upload2"></span>
     </div>
+    <div class="title bottom_blank">交叉渲染</div>
+    <div id="detail_render" class="bottom_blank"></div>
   </div>
+  <!-- 插件 -->
   <script src="./js/jquery.js"></script>
+  <script src="./js/moment.js"></script>
+  <!-- 组件 -->
   <script src="./packages/js/avatar.js"></script>
   <script src="./packages/js/upload.js"></script>
+  <script src="./packages/js/detail.js"></script>
   <script src="./js/demo.js"></script>
 </body>
 </html>

@@ -70,7 +70,33 @@ function upload () {
   };
   var upload2 = $upload2.renderUpload(param2);
 }
-
+// 详情渲染
+function detailRender () {
+  var $target = $('#detail_render');
+  var columns = [
+    {
+      key: 'name',
+      title: '姓名：'
+    },
+    {
+      key: 'birthday',
+      title: '出生日期：',
+      render: function (data) {
+        var birthday = data.birthday || '';
+        return birthday ? moment(birthday).format('YYYY-MM-DD HH:mm') : ''
+      }
+    }
+  ];
+  var data = {
+    name: '张三',
+    birthday: Date.now()
+  };
+  $target.renderDetail({
+    data,
+    columns,
+    leftTextAlign: 'right'
+  });
+}
 
 // 单个头像
 avatarSingle();
@@ -78,3 +104,5 @@ avatarSingle();
 avatarBatch();
 // 上传文件
 upload();
+// 详情渲染
+detailRender();
